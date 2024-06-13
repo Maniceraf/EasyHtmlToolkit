@@ -1,17 +1,36 @@
 ﻿using EasyHtmlToolkit.Models;
+using System.Net.Http;
+using System.Reflection.Metadata;
 using System.Text;
 
 namespace EasyHtmlToolkit
 {
     public class HtmlDocument
     {
+        #region Fields
+
         public HtmlElement Head { get; set; }
         public HtmlElement Body { get; set; }
+
+        #endregion
+
+        #region Constructor
 
         public HtmlDocument()
         {
             Head = new HtmlElement("head");
             Body = new HtmlElement("body");
+        }
+
+        #endregion
+
+        #region Public Methods
+
+        public void AddStyleToHead(string css)
+        {
+            var styleElement = new HtmlElement("style");
+            styleElement.InnerText = css;
+            Head.AddChild(styleElement);
         }
 
         public override string ToString()
@@ -37,6 +56,17 @@ namespace EasyHtmlToolkit
             File.WriteAllText(filePath, ToString());
         }
 
+        public void SaveToFile1(string directoryPath, string? fileName = null)
+        {
+            byte[] htmlBytes = Encoding.UTF8.GetBytes(ToString());
+
+            // Combine the folder path and file name
+            string filePath = Path.Combine(directoryPath, fileName ?? "index.html");
+
+            // Write the byte array to a file
+            File.WriteAllBytes(filePath, htmlBytes);
+        }
+
         public bool TrySaveToFile(string directoryPath, string? fileName = null)
         {
             try
@@ -57,9 +87,46 @@ namespace EasyHtmlToolkit
 
         public void SaveToDownloadsFolder(string? fileName = null)
         {
+            string name = fileName ?? "index";
             string downloadsPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "Downloads");
-            string filePath = Path.Combine(downloadsPath, fileName ?? "index.html");
+            string filePath = Path.Combine(downloadsPath, $"{name}.html");
+
+            if (File.Exists(filePath))
+            {
+                fileName = GetUniqueFileName(downloadsPath, name, ".html");
+                filePath = Path.Combine(downloadsPath, fileName);
+            }
+
             File.WriteAllText(filePath, ToString());
         }
+
+        public byte[] GetFile()
+        {
+            byte[] htmlBytes = Encoding.UTF8.GetBytes(ToString());
+
+            return htmlBytes;
+        }
+
+        #endregion
+
+        #region Private Methods
+
+        private static string GetUniqueFileName(string directoryPath, string fileNameWithoutExtension, string fileExtension)
+        {
+            int count = 1;
+            string fileName = $"{fileNameWithoutExtension}{fileExtension}";
+            string newFileName = fileName;
+
+            while (File.Exists(Path.Combine(directoryPath, newFileName)))
+            {
+                newFileName = $"{fileNameWithoutExtension}_{count}{fileExtension}";
+                count++;
+            }
+
+            return newFileName;
+        }
+
+
+        #endregion
     }
 }

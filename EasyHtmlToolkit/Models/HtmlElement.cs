@@ -2,18 +2,16 @@
 
 namespace EasyHtmlToolkit.Models
 {
-    public class HtmlElement
+    public class HtmlElement(string tagName)
     {
-        public string TagName { get; set; }
-        public string InnerText { get; set; }
-        public Dictionary<string, string> Attributes { get; set; }
-        public List<HtmlElement> Children { get; set; }
+        public string TagName { get; set; } = tagName;
+        public string? InnerText { get; set; }
+        public Dictionary<string, string> Attributes { get; set; } = [];
+        public List<HtmlElement> Children { get; set; } = [];
 
-        public HtmlElement(string tagName)
+        public void AddChild(HtmlElement child)
         {
-            TagName = tagName;
-            Attributes = [];
-            Children = [];
+            Children.Add(child);
         }
 
         public void AddAttribute(string key, string value)
@@ -21,20 +19,27 @@ namespace EasyHtmlToolkit.Models
             Attributes[key] = value;
         }
 
-        public void AddChild(HtmlElement child)
+        public void AddId(string value)
         {
-            Children.Add(child);
-        }
-
-        public void AddClass(string className)
-        {
-            if (Attributes.ContainsKey("class"))
+            if (Attributes.ContainsKey("id"))
             {
-                Attributes["class"] += " " + className;
+                Attributes["id"] += " " + value;
             }
             else
             {
-                Attributes["class"] = className;
+                Attributes["id"] = value;
+            }
+        }
+
+        public void AddClass(string value)
+        {
+            if (Attributes.ContainsKey("class"))
+            {
+                Attributes["class"] += " " + value;
+            }
+            else
+            {
+                Attributes["class"] = value;
             }
         }
 
