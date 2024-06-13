@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34902.65
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyHtmlToolkit", "EasyHtmlToolkit\EasyHtmlToolkit.csproj", "{8A3C5F84-0D03-4CA1-879C-0B8F8DB8C255}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyHtmlToolkit.Test", "EasyHtmlToolkit.Test\EasyHtmlToolkit.Test.csproj", "{BE412704-169E-41A4-A90B-160A290EFC3C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8A3C5F84-0D03-4CA1-879C-0B8F8DB8C255}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A3C5F84-0D03-4CA1-879C-0B8F8DB8C255}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A3C5F84-0D03-4CA1-879C-0B8F8DB8C255}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A3C5F84-0D03-4CA1-879C-0B8F8DB8C255}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE412704-169E-41A4-A90B-160A290EFC3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE412704-169E-41A4-A90B-160A290EFC3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE412704-169E-41A4-A90B-160A290EFC3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE412704-169E-41A4-A90B-160A290EFC3C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5C3E1267-54F5-4761-B30C-1F316D72FE76}
+	EndGlobalSection
+EndGlobal
