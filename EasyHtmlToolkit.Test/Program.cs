@@ -53,6 +53,10 @@ namespace EasyHtmlToolkit.Test
 
             doc.Body.AddChild(table);
 
+            doc.AddStyleToHead(@"table, th, td {
+  border: 1px solid black;
+}");
+
             doc.SaveToFile1("D:\\", "test1.html");
         }
 

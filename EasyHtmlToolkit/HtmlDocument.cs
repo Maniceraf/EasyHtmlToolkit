@@ -1,6 +1,4 @@
 ﻿using EasyHtmlToolkit.Models;
-using System.Net.Http;
-using System.Reflection.Metadata;
 using System.Text;
 
 namespace EasyHtmlToolkit
@@ -26,7 +24,7 @@ namespace EasyHtmlToolkit
 
         #region Public Methods
 
-        public void AddStyleToHead(string css)
+        public void AddStyle(string css)
         {
             var styleElement = new HtmlElement("style");
             styleElement.InnerText = css;
