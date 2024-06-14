@@ -4,7 +4,7 @@ namespace EasyHtmlToolkit.Extensions
 {
     public class FileMinimizer
     {
-        public string GetMinimizedFileContent(string filePath)
+        public string? GetMinimizedFileContent(string filePath)
         {
             try
             {

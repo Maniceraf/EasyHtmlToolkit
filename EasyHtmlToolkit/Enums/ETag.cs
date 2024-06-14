@@ -45,5 +45,11 @@ namespace EasyHtmlToolkit.Enums
 
         [Description("img")]
         img = 13,
+
+        [Description("b")]
+        b = 14,
+
+        [Description("abbr")]
+        abbr = 15,
     }
 }

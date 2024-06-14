@@ -8,7 +8,14 @@ namespace EasyHtmlToolkit.Test
     {
         static void Main(string[] args)
         {
-            
+            var b = new BTag("and this is bold text");
+            var p = new PTag($"This is normal text - {b}.");
+
+            var doc = new HtmlDocument();
+
+            doc.Body.AddChildren(p);
+
+            doc.SaveToDownloadsFolder();
         }
 
         public static void Example1()
