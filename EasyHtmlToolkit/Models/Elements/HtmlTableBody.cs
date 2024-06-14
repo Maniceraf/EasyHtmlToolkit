@@ -1,8 +1,10 @@
-﻿namespace EasyHtmlToolkit.Models.Elements
+﻿using EasyHtmlToolkit.Enums;
+
+namespace EasyHtmlToolkit.Models.Elements
 {
     public class HtmlTableBody : HtmlElement
     {
-        public HtmlTableBody() : base("tbody")
+        public HtmlTableBody() : base(ETag.h1)
         {
         }
     }

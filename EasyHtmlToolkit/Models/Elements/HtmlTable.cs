@@ -1,17 +1,18 @@
-﻿using System;
+﻿using EasyHtmlToolkit.Enums;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 namespace EasyHtmlToolkit.Models.Elements
 {
     public class HtmlTable : HtmlElement
     {
-        public HtmlTable() : base("table")
+        public HtmlTable() : base(ETag.h1)
         {
         }
 
         public void AddRow(HtmlRow row)
         {
-            AddChild(row);
+            AddChildren(row);
         }
 
         public void AddRowFromData(params string[] cellData)

@@ -1,7 +1,9 @@
-﻿namespace EasyHtmlToolkit.Models.Elements
+﻿using EasyHtmlToolkit.Enums;
+
+namespace EasyHtmlToolkit.Models.Elements
 {
     public class HtmlCell : HtmlElement
     {
-        public HtmlCell() : base("td") { }
+        public HtmlCell() : base(ETag.h1) { }
     }
 }

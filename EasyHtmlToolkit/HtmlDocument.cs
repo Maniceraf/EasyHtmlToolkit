@@ -1,4 +1,5 @@
-﻿using EasyHtmlToolkit.Models;
+﻿using EasyHtmlToolkit.Enums;
+using EasyHtmlToolkit.Models;
 using System.Text;
 
 namespace EasyHtmlToolkit
@@ -16,8 +17,8 @@ namespace EasyHtmlToolkit
 
         public HtmlDocument()
         {
-            Head = new HtmlElement("head");
-            Body = new HtmlElement("body");
+            Head = new HtmlElement(ETag.head);
+            Body = new HtmlElement(ETag.body);
         }
 
         #endregion
@@ -26,7 +27,7 @@ namespace EasyHtmlToolkit
 
         public void AddStyle(string css)
         {
-            var styleElement = new HtmlElement("style");
+            var styleElement = new HtmlElement(ETag.style);
             styleElement.InnerText = css;
             Head.AddChildren(styleElement);
         }

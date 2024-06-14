@@ -2,9 +2,11 @@
 
 namespace EasyHtmlToolkit.Models.Elements
 {
-    public class HtmlTd : HtmlElement
+    public class H3Tag : HtmlElement
     {
-        public HtmlTd(string value) : base(ETag.h1)
+        public H3Tag() : base(ETag.h3) { }
+
+        public H3Tag(string value) : base(ETag.h3)
         {
             InnerText = value;
         }

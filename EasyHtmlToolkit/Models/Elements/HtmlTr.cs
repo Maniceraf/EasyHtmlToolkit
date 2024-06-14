@@ -1,8 +1,10 @@
-﻿namespace EasyHtmlToolkit.Models.Elements
+﻿using EasyHtmlToolkit.Enums;
+
+namespace EasyHtmlToolkit.Models.Elements
 {
     public class HtmlTr : HtmlElement
     {
-        public HtmlTr() : base("tr")
+        public HtmlTr() : base(ETag.h1)
         {
         }
     }

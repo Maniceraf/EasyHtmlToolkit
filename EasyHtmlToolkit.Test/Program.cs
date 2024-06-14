@@ -1,4 +1,5 @@
-﻿using EasyHtmlToolkit.Models;
+﻿using EasyHtmlToolkit.Enums;
+using EasyHtmlToolkit.Models;
 using EasyHtmlToolkit.Models.Elements;
 
 namespace EasyHtmlToolkit.Test
@@ -7,7 +8,20 @@ namespace EasyHtmlToolkit.Test
     {
         static void Main(string[] args)
         {
-            Example1();
+            var h1 = new H1Tag("Happy niu year");
+
+            h1.SetStyle("color", "blue");
+            h1.SetStyle("color", "red");
+
+            Console.WriteLine(h1.Styles);
+
+            var doc = new HtmlDocument();
+
+            doc.Body.AddChildren(h1);
+
+            h1.SetStyle("color", "yellow");
+
+            doc.SaveToDownloadsFolder();
         }
 
         public static void Example1()
@@ -66,7 +80,7 @@ namespace EasyHtmlToolkit.Test
             var document = new HtmlDocument();
 
             // Create a button element
-            var button = new HtmlElement("button");
+            var button = new HtmlElement(ETag.button);
             button.InnerText = "Click Me";
 
             // Set the accesskey attribute for the button (e.g., Alt + B)

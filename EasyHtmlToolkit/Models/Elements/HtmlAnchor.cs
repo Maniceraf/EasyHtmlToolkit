@@ -1,8 +1,10 @@
-﻿namespace EasyHtmlToolkit.Models.Elements
+﻿using EasyHtmlToolkit.Enums;
+
+namespace EasyHtmlToolkit.Models.Elements
 {
     public class HtmlAnchor : HtmlElement
     {
-        public HtmlAnchor() : base("a") { }
+        public HtmlAnchor() : base(ETag.h1) { }
 
         public void SetHref(string href)
         {

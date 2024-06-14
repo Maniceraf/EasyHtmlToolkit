@@ -1,8 +1,10 @@
-﻿namespace EasyHtmlToolkit.Models.Elements
+﻿using EasyHtmlToolkit.Enums;
+
+namespace EasyHtmlToolkit.Models.Elements
 {
     public class HtmlTableFooter : HtmlElement
     {
-        public HtmlTableFooter() : base("tfooter")
+        public HtmlTableFooter() : base(ETag.h1)
         {
         }
     }
