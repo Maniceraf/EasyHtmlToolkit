@@ -51,5 +51,23 @@ namespace EasyHtmlToolkit.Enums
 
         [Description("abbr")]
         abbr = 15,
+
+        [Description("address")]
+        address = 16,
+
+        [Description("area")]
+        area = 17,
+
+        [Description("article")]
+        article = 18,
+
+        [Description("aside")]
+        aside = 19,
+
+        [Description("div")]
+        div = 20,
+
+        [Description("span")]
+        span = 21,
     }
 }
