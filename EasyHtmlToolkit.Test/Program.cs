@@ -22,13 +22,13 @@ namespace EasyHtmlToolkit.Test
 
             var th = new HtmlTh("Month");
 
-            tr.AddChild(th);
+            tr.AddChildren(th);
 
             th = new HtmlTh("Savings");
 
-            tr.AddChild(th);
+            tr.AddChildren(th);
 
-            tableHeader.AddChild(tr);
+            tableHeader.AddChildren(tr);
 
             var tableBody = new HtmlTableBody();
 
@@ -38,24 +38,24 @@ namespace EasyHtmlToolkit.Test
 
             var td = new HtmlTd("January");
 
-            tr.AddChild(td);
+            tr.AddChildren(td);
 
             td = new HtmlTd("$100");
 
-            tr.AddChild(td);
+            tr.AddChildren(td);
 
-            tableBody.AddChild(tr);
+            tableBody.AddChildren(tr);
 
-            table.AddChild(tableHeader);
-            table.AddChild(tableBody);
+            table.AddChildren(tableHeader);
+            table.AddChildren(tableBody);
 
             table.AddAttribute("style", "width:100%; border: 1px solid black");
 
-            doc.Body.AddChild(table);
+            doc.Body.AddChildren(table);
 
-            doc.AddStyleToHead(@"table, th, td {
-  border: 1px solid black;
-}");
+            doc.AddStyle(@"table, th, td {
+              border: 1px solid black;
+            }");
 
             doc.SaveToFile1("D:\\", "test1.html");
         }
@@ -73,7 +73,7 @@ namespace EasyHtmlToolkit.Test
             button.AddAttribute("accesskey", "b");
 
             // Add the button to the document body
-            document.Body.AddChild(button);
+            document.Body.AddChildren(button);
 
             // Save the HTML document to a file
             document.SaveToDownloadsFolder();

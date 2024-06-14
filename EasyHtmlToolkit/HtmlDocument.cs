@@ -28,7 +28,7 @@ namespace EasyHtmlToolkit
         {
             var styleElement = new HtmlElement("style");
             styleElement.InnerText = css;
-            Head.AddChild(styleElement);
+            Head.AddChildren(styleElement);
         }
 
         public override string ToString()

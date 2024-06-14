@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System;
+using System.Text;
 
 namespace EasyHtmlToolkit.Models
 {
@@ -7,11 +8,12 @@ namespace EasyHtmlToolkit.Models
         public string TagName { get; set; } = tagName;
         public string? InnerText { get; set; }
         public Dictionary<string, string> Attributes { get; set; } = [];
-        public List<HtmlElement> Children { get; set; } = [];
+        public Dictionary<string, string> Styles { get; set; } = [];
+        public List<HtmlElement> Childrens { get; set; } = [];
 
-        public void AddChild(HtmlElement child)
+        public void AddChildren(HtmlElement children)
         {
-            Children.Add(child);
+            Childrens.Add(children);
         }
 
         public void AddAttribute(string key, string value)
@@ -53,6 +55,12 @@ namespace EasyHtmlToolkit.Models
             var sb = new StringBuilder();
             sb.Append($"<{TagName}");
 
+            var style = string.Join(";", Styles.Select(x => $"{x.Key}: {x.Value}"));
+            if (!string.IsNullOrEmpty(style))
+            {
+                sb.Append($" style=\"{style}\"");
+            }
+
             foreach (var attribute in Attributes)
             {
                 sb.Append($" {attribute.Key}=\"{attribute.Value}\"");
@@ -65,7 +73,7 @@ namespace EasyHtmlToolkit.Models
                 sb.Append(InnerText);
             }
 
-            foreach (var child in Children)
+            foreach (var child in Childrens)
             {
                 sb.Append(child.ToString());
             }
