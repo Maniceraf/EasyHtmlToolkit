@@ -39,5 +39,11 @@ namespace EasyHtmlToolkit.Enums
 
         [Description("button")]
         button = 11,
+
+        [Description("a")]
+        a = 12,
+
+        [Description("img")]
+        img = 13,
     }
 }

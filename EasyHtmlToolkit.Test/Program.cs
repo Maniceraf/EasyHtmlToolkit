@@ -8,20 +8,7 @@ namespace EasyHtmlToolkit.Test
     {
         static void Main(string[] args)
         {
-            var h1 = new H1Tag("Happy niu year");
-
-            h1.SetStyle("color", "blue");
-            h1.SetStyle("color", "red");
-
-            Console.WriteLine(h1.Styles);
-
-            var doc = new HtmlDocument();
-
-            doc.Body.AddChildren(h1);
-
-            h1.SetStyle("color", "yellow");
-
-            doc.SaveToDownloadsFolder();
+            
         }
 
         public static void Example1()
@@ -91,6 +78,22 @@ namespace EasyHtmlToolkit.Test
 
             // Save the HTML document to a file
             document.SaveToDownloadsFolder();
+        }
+
+        public static void Example3()
+        {
+            var h1 = new H1Tag("Happy niu year");
+
+            h1.SetStyle("color", "blue");
+            h1.SetStyle("color", "red");
+
+            var doc = new HtmlDocument();
+
+            doc.Body.AddChildren(h1);
+
+            h1.SetStyle("color", "yellow");
+
+            doc.SaveToDownloadsFolder();
         }
     }
 }
