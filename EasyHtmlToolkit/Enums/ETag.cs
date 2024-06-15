@@ -69,5 +69,26 @@ namespace EasyHtmlToolkit.Enums
 
         [Description("span")]
         span = 21,
+
+        [Description("table")]
+        table = 22,
+
+        [Description("thead")]
+        thead = 23,
+
+        [Description("tbody")]
+        tbody = 24,
+
+        [Description("tfoot")]
+        tfoot = 25,
+
+        [Description("tr")]
+        tr = 26,
+
+        [Description("th")]
+        th = 27,
+
+        [Description("td")]
+        td = 28,
     }
 }

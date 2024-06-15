@@ -22,33 +22,33 @@ namespace EasyHtmlToolkit.Test
         {
             var doc = new HtmlDocument();
 
-            var table = new HtmlTable();
+            var table = new TableTag();
 
-            var tableHeader = new HtmlTableHeader();
+            var tableHeader = new TheadTag();
 
-            var tr = new HtmlTr();
+            var tr = new TrTag();
 
-            var th = new HtmlTh("Month");
+            var th = new ThTag("Month");
 
             tr.AddChildren(th);
 
-            th = new HtmlTh("Savings");
+            th = new ThTag("Savings");
 
             tr.AddChildren(th);
 
             tableHeader.AddChildren(tr);
 
-            var tableBody = new HtmlTableBody();
+            var tableBody = new TbodyTag();
 
-            tr = new HtmlTr();
+            tr = new TrTag();
 
             tr.AddAttribute("style", "text-align:right");
 
-            var td = new HtmlTd("January");
+            var td = new TdTag("January");
 
             tr.AddChildren(td);
 
-            td = new HtmlTd("$100");
+            td = new TdTag("$100");
 
             tr.AddChildren(td);
 
