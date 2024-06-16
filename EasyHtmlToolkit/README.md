@@ -1,0 +1,1 @@
+EasyHtmlToolkit is a lightweight and versatile C# library designed to simplify the generation and manipulation of HTML content programmatically. Whether you're creating dynamic web pages, generating HTML emails, or automating report generation, EasyHtmlToolkit provides an intuitive API to streamline the process.

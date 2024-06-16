@@ -4,6 +4,27 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>EasyHtmlToolkit</Title>
+    <PackageId>Maniceraf.EasyHtmlToolkit</PackageId>
+    <Authors>Maniceraf</Authors>
+    <Company>Maniceraf</Company>
+    <Description>EasyHtmlToolkit is a versatile library designed to simplify the creation and manipulation of HTML content in C#. It provides a straightforward and intuitive API for generating HTML documents dynamically, making it easier to integrate HTML generation into your applications.</Description>
+    <Copyright>Copyright © 2024 Maniceraf</Copyright>
+    <PackageProjectUrl>https://github.com/Maniceraf/EasyHtmlToolkit</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/Maniceraf/EasyHtmlToolkit</RepositoryUrl>
+    <PackageTags>Maniceraf;Maniceraf.EasyHtmlToolkit</PackageTags>
+    <IncludeSymbols>True</IncludeSymbols>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>
