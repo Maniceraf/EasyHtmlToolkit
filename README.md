@@ -13,7 +13,7 @@ EasyHtmlToolkit facilitates the creation and customization of HTML documents dir
 You can install EasyHtmlToolkit via NuGet Package Manager:
 
 ```bash
-nuget install EasyHtmlToolkit
+Install-Package Maniceraf.EasyHtmlToolkit -Version 1.0.0
 ```
 
 ### Usage:
